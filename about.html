@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>empower</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+    body{
+        padding: 0;
+        margin: 0; 
+        margin-left: -40px;
+    box-sizing: border-box; 
+    }
+    nav{
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      right: 0;
+      top: 0;
+      padding: 0 5%;
+      height: 80px;
+     
+    }
+    nav .logo{
+     float: left;
+     width: 40%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     font-size: 40px;
+     color: white;
+    } 
+    nav .links{
+      float: right;
+      padding: 0;
+      margin: 0;
+      width: 60%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    nav .links li{
+      list-style: none;
+    }
+    nav .links a{
+      display: block;
+      padding: 1em;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none; 
+    }
+    nav .links a:hover{
+       color: red;
+       background: black;
+     }
+    #nav-toggle{
+      position: absolute;
+      top: -100px;
+    }
+    nav .icon-burger{
+      display: none;
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translate(-50%);
+    }
+    nav .icon-burger .line{
+      width: 30px;
+      height: 5px;
+      background-color:#ffffff;
+      margin: 5px;
+      border-radius:3px;
+    }
+   @media screen and (max-width: 768px){
+    nav .logo{
+      float: none;
+      width: auto;
+      justify-content: center;
+     }
+     nav .links{
+       float: none;
+       position: fixed;
+       z-index: 9;
+       left: 0;
+       right: 0;
+       top: 80px;
+       bottom: 100%;
+       width: auto;
+       height: auto;
+       flex-direction: column;
+       justify-content: space-evenly;
+       background-color: rgba(0,0,0,.8);
+       overflow: hidden;
+       transition: all.5s ease-in-out;
+     }
+     nav .links a{
+       font-size: 20px;
+     }
+     nav .links a:hover{
+       color: red;
+       background: black;
+     }
+     nav :checked~ .links{
+       bottom: 0;
+     }
+     nav .icon-burger {
+       display: block;
+     }
+     nav :checked ~ .icon-burger .line:nth-child(1){
+      transform: translateY(10px) rotate(225deg);
+     }
+     nav :checked ~ .icon-burger .line:nth-child(3){
+      transform: translateY(-10px) rotate(-225deg);
+     }
+     nav :checked ~ .icon-burger .line:nth-child(2){
+     opacity: 0;
+     }
+   }
+   .banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; 
+   
+    
+}
+.banner img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.45;
+   
+
+}
+.banner .content{ 
+    position: relative;
+    max-width: 1000px;
+    text-align: center; 
+  
+}
+
+    </style>
+</head>
+<body>
+    <!--***********************top*********************************************-->
+   
+        
+    <div class="banner">
+        <img src="assets/about.jpg" alt="">
+        <header>
+           <nav>
+             <input id="nav-toggle" type="checkbox">
+            <label class="logo">BE Empower</label>
+            <ul class="links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html"><li>About</li></a>
+                <a href=""><li>Counsulting</li></a>
+                <a href=""><li>Podcast</li></a>
+                <a href=""><li>Speaking</li></a>
+                <a href=""><li>Media</li></a>
+                <a href=""><li>Contact</li></a>   
+            </ul>
+           <label for="nav-toggle" class="icon-burger">
+             <div class="line"></div>
+             <div class="line"></div>
+             <div class="line"></div>
+           </label>
+        </nav>
+        </header>
+        <div class="content">
+                <h1 style="font-size: 60px;">BE PASSIONATE</h1>
+                
+             <br>
+        </div> 
+    </div>
+   <!--**********************************about***********************************************************-->
+  <div class="abouttxt">
+    <h3><i class='fa fa-home' style='font-size:48px;color:royalblue'></i> <i>> About</i> </h3><br><br><br> <br><br>
+    <div class="row">
+      <div class="col-sm-6"class="list" style="padding-left: 200px;">
+       <h1><i>ABOUT</i></h1>
+       <a href="">BIOGRAPHY ></a> <br>
+      <a href="">MISSION ></a> <br>
+      <a href="">WHAT WE DO ></a> <br>
+      <a href="">WHAT WE DO IT ></a> <br>
+      <a href="">THE TEAM ></a><br>
+      </div>
+      <div class="col-sm-6" class="texting">
+        <h4>Hi, we’re Greg and Laura Bennett, 
+          former Professional Olympic Athletes 
+          who dedicated our lives to high performance. 
+          Now we’ve distilled everything we’ve learned 
+          into helping you with our high-performance 
+          consulting and speaking service.</h4> <br>
+        <p>We’re incredibly passionate and 
+          purpose driven and want to squeeze 
+          everything we can out of life. We believe 
+          life is about experiences. We used the sport of 
+          Triathlon to experience life.</p>
+      </div>
+    </div>
+  </div><br><br><br><br>
+   
+    <div class="para">
+      
+    </div>
+
+
+
+
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="power.js"></script>
+    </body>
+    </html>
